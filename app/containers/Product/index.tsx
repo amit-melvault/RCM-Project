@@ -1,13 +1,12 @@
 import React from 'react';
 import { Grid, GridItem } from '@patternfly/react-core';
 import { SearchInput, Button } from '@patternfly/react-core';
-import { P, H2, Div } from './ProductStyle'
+import { P, H2, Div } from './styles/ProductStyle'
+
+import ProductState from './models/product-models';
 
 
-interface ComponentState {
-    value: any,
-}
-class Product extends React.Component<{}, ComponentState>{
+class Product extends React.Component<{}, ProductState>{
     constructor(props) {
         super(props);
         this.state = {
@@ -25,7 +24,7 @@ class Product extends React.Component<{}, ComponentState>{
         return (
             <>
                 <Grid>
-                    <GridItem span={6}> 
+                    <GridItem span={6}>
                         <H2>Product</H2>
                         <p>Make Changes to Product Here</p>
                     </GridItem>
@@ -50,4 +49,3 @@ class Product extends React.Component<{}, ComponentState>{
 }
 
 export default Product;
-
